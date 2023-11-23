@@ -6,3 +6,5 @@ from django.contrib.auth.models import User
 class Issue(models.Model):
     user=models.ForeignKey(User,on_delete=models.CASCADE)
     title=models.CharField(max_length=75)
+    description=models.TextField()
+    
