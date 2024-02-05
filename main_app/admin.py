@@ -1,8 +1,11 @@
 from django.contrib import admin
-from .models import Issue
+from .models import Complaint
 # Register your models here.
 
-class IssueAdmin(admin.ModelAdmin):
-    pass
+class ComplaintAdmin(admin.ModelAdmin):
+    list_display=("user","title","category","description","images","date_created","status")
+    
 
-admin.site.register(Issue,IssueAdmin)
+
+
+admin.site.register(Complaint, ComplaintAdmin)
